@@ -7,19 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37CAEF489874E22B086C1E3C /* Pods_AppleGitSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28925A4496655B07C8D93F93 /* Pods_AppleGitSearch.framework */; };
+		D02B44F920A7738B008ABC41 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B44F820A7738B008ABC41 /* WebViewController.swift */; };
+		D02B44FB20A79ED0008ABC41 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B44FA20A79ED0008ABC41 /* Repo.swift */; };
+		D02B44FD20A7A126008ABC41 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B44FC20A7A126008ABC41 /* Extensions.swift */; };
+		D02B44FF20A7B0BE008ABC41 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D02B44FE20A7B0BE008ABC41 /* CustomCell.xib */; };
+		D02B450120A7B0CF008ABC41 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B450020A7B0CF008ABC41 /* CustomCell.swift */; };
 		D0A94B2620A63B3500AF09C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A94B2520A63B3500AF09C0 /* AppDelegate.swift */; };
-		D0A94B2820A63B3500AF09C0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A94B2720A63B3500AF09C0 /* FirstViewController.swift */; };
-		D0A94B2A20A63B3500AF09C0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A94B2920A63B3500AF09C0 /* SecondViewController.swift */; };
+		D0A94B2820A63B3500AF09C0 /* AppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A94B2720A63B3500AF09C0 /* AppleViewController.swift */; };
+		D0A94B2A20A63B3500AF09C0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A94B2920A63B3500AF09C0 /* SearchViewController.swift */; };
 		D0A94B2D20A63B3500AF09C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A94B2B20A63B3500AF09C0 /* Main.storyboard */; };
 		D0A94B2F20A63B3700AF09C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A94B2E20A63B3700AF09C0 /* Assets.xcassets */; };
 		D0A94B3220A63B3700AF09C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A94B3020A63B3700AF09C0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28925A4496655B07C8D93F93 /* Pods_AppleGitSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleGitSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3C633783B6101231CCBE76 /* Pods-AppleGitSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleGitSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppleGitSearch/Pods-AppleGitSearch.release.xcconfig"; sourceTree = "<group>"; };
+		C20593F07AF7F497BE0C6855 /* Pods-AppleGitSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleGitSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppleGitSearch/Pods-AppleGitSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		D02B44F820A7738B008ABC41 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D02B44FA20A79ED0008ABC41 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		D02B44FC20A7A126008ABC41 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D02B44FE20A7B0BE008ABC41 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		D02B450020A7B0CF008ABC41 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		D0A94B2220A63B3500AF09C0 /* AppleGitSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleGitSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A94B2520A63B3500AF09C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0A94B2720A63B3500AF09C0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D0A94B2920A63B3500AF09C0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D0A94B2720A63B3500AF09C0 /* AppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleViewController.swift; sourceTree = "<group>"; };
+		D0A94B2920A63B3500AF09C0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D0A94B2C20A63B3500AF09C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0A94B2E20A63B3700AF09C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0A94B3120A63B3700AF09C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CAEF489874E22B086C1E3C /* Pods_AppleGitSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04BC5883C24D2B746F33BA20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28925A4496655B07C8D93F93 /* Pods_AppleGitSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68046E0E40CF74976D7B820C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C20593F07AF7F497BE0C6855 /* Pods-AppleGitSearch.debug.xcconfig */,
+				6E3C633783B6101231CCBE76 /* Pods-AppleGitSearch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D0A94B1920A63B3500AF09C0 = {
 			isa = PBXGroup;
 			children = (
 				D0A94B2420A63B3500AF09C0 /* AppleGitSearch */,
 				D0A94B2320A63B3500AF09C0 /* Products */,
+				68046E0E40CF74976D7B820C /* Pods */,
+				04BC5883C24D2B746F33BA20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +90,28 @@
 		D0A94B2420A63B3500AF09C0 /* AppleGitSearch */ = {
 			isa = PBXGroup;
 			children = (
+				D0C0A88B20A7698300B50232 /* Models */,
 				D0A94B2520A63B3500AF09C0 /* AppDelegate.swift */,
-				D0A94B2720A63B3500AF09C0 /* FirstViewController.swift */,
-				D0A94B2920A63B3500AF09C0 /* SecondViewController.swift */,
+				D0A94B2720A63B3500AF09C0 /* AppleViewController.swift */,
+				D0A94B2920A63B3500AF09C0 /* SearchViewController.swift */,
 				D0A94B2B20A63B3500AF09C0 /* Main.storyboard */,
 				D0A94B2E20A63B3700AF09C0 /* Assets.xcassets */,
 				D0A94B3020A63B3700AF09C0 /* LaunchScreen.storyboard */,
 				D0A94B3320A63B3700AF09C0 /* Info.plist */,
+				D02B44F820A7738B008ABC41 /* WebViewController.swift */,
+				D02B44FC20A7A126008ABC41 /* Extensions.swift */,
+				D02B44FE20A7B0BE008ABC41 /* CustomCell.xib */,
+				D02B450020A7B0CF008ABC41 /* CustomCell.swift */,
 			);
 			path = AppleGitSearch;
+			sourceTree = "<group>";
+		};
+		D0C0A88B20A7698300B50232 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D02B44FA20A79ED0008ABC41 /* Repo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +121,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0A94B3620A63B3700AF09C0 /* Build configuration list for PBXNativeTarget "AppleGitSearch" */;
 			buildPhases = (
+				313898E0C72C5810ED0644E7 /* [CP] Check Pods Manifest.lock */,
 				D0A94B1E20A63B3500AF09C0 /* Sources */,
 				D0A94B1F20A63B3500AF09C0 /* Frameworks */,
 				D0A94B2020A63B3500AF09C0 /* Resources */,
+				1FB7102FEC889AA26B938F90 /* [CP] Embed Pods Frameworks */,
+				B1153B51C1BB7941CF4A08BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,20 +177,81 @@
 			files = (
 				D0A94B3220A63B3700AF09C0 /* LaunchScreen.storyboard in Resources */,
 				D0A94B2F20A63B3700AF09C0 /* Assets.xcassets in Resources */,
+				D02B44FF20A7B0BE008ABC41 /* CustomCell.xib in Resources */,
 				D0A94B2D20A63B3500AF09C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FB7102FEC889AA26B938F90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AppleGitSearch/Pods-AppleGitSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppleGitSearch/Pods-AppleGitSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		313898E0C72C5810ED0644E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppleGitSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1153B51C1BB7941CF4A08BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppleGitSearch/Pods-AppleGitSearch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0A94B1E20A63B3500AF09C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0A94B2A20A63B3500AF09C0 /* SecondViewController.swift in Sources */,
+				D02B44FB20A79ED0008ABC41 /* Repo.swift in Sources */,
+				D0A94B2A20A63B3500AF09C0 /* SearchViewController.swift in Sources */,
 				D0A94B2620A63B3500AF09C0 /* AppDelegate.swift in Sources */,
-				D0A94B2820A63B3500AF09C0 /* FirstViewController.swift in Sources */,
+				D0A94B2820A63B3500AF09C0 /* AppleViewController.swift in Sources */,
+				D02B44F920A7738B008ABC41 /* WebViewController.swift in Sources */,
+				D02B450120A7B0CF008ABC41 /* CustomCell.swift in Sources */,
+				D02B44FD20A7A126008ABC41 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +393,7 @@
 		};
 		D0A94B3720A63B3700AF09C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C20593F07AF7F497BE0C6855 /* Pods-AppleGitSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,12 +406,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Zeman.AppleGitSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D0A94B3820A63B3700AF09C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E3C633783B6101231CCBE76 /* Pods-AppleGitSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,7 +425,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Zeman.AppleGitSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
