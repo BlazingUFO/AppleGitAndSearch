@@ -19,6 +19,8 @@
 		D0A94B2D20A63B3500AF09C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A94B2B20A63B3500AF09C0 /* Main.storyboard */; };
 		D0A94B2F20A63B3700AF09C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A94B2E20A63B3700AF09C0 /* Assets.xcassets */; };
 		D0A94B3220A63B3700AF09C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A94B3020A63B3700AF09C0 /* LaunchScreen.storyboard */; };
+		D0FB5B9C20A87C01002FAA26 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0FB5B9920A87C01002FAA26 /* Model.xcdatamodeld */; };
+		D0FB5B9E20A87D93002FAA26 /* RepoSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB5B9D20A87D93002FAA26 /* RepoSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,9 @@
 		D0A94B2E20A63B3700AF09C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0A94B3120A63B3700AF09C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0A94B3320A63B3700AF09C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0FB5B9A20A87C01002FAA26 /* Repo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Repo.xcdatamodel; sourceTree = "<group>"; };
+		D0FB5B9B20A87C01002FAA26 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D0FB5B9D20A87D93002FAA26 /* RepoSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +130,9 @@
 		D0C0A88B20A7698300B50232 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D0FB5B9D20A87D93002FAA26 /* RepoSearch.swift */,
 				D02B44FA20A79ED0008ABC41 /* Repo.swift */,
+				D0FB5B9920A87C01002FAA26 /* Model.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,12 +215,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AppleGitSearch/Pods-AppleGitSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCoreData/RxCoreData.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCoreData.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,9 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0FB5B9E20A87D93002FAA26 /* RepoSearch.swift in Sources */,
 				D02B44FB20A79ED0008ABC41 /* Repo.swift in Sources */,
 				D0A94B2A20A63B3500AF09C0 /* SearchViewController.swift in Sources */,
 				D0A94B2620A63B3500AF09C0 /* AppDelegate.swift in Sources */,
+				D0FB5B9C20A87C01002FAA26 /* Model.xcdatamodeld in Sources */,
 				D0A94B2820A63B3500AF09C0 /* AppleViewController.swift in Sources */,
 				D02B44F920A7738B008ABC41 /* WebViewController.swift in Sources */,
 				D02B450120A7B0CF008ABC41 /* CustomCell.swift in Sources */,
@@ -467,6 +482,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0FB5B9920A87C01002FAA26 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0FB5B9A20A87C01002FAA26 /* Repo.xcdatamodel */,
+				D0FB5B9B20A87C01002FAA26 /* Model.xcdatamodel */,
+			);
+			currentVersion = D0FB5B9A20A87C01002FAA26 /* Repo.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D0A94B1A20A63B3500AF09C0 /* Project object */;
 }

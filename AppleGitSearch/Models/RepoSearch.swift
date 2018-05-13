@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Repo {
+struct RepoSearch {
     let id: Int
     let name: String
     let descriptionString: String

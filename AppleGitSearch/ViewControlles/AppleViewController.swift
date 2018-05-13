@@ -52,7 +52,7 @@ class AppleViewController: UIViewController, UITableViewDelegate {
             .bind(to: tableView.rx.items) { tableView, row, repo in
                 let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
                 cell.full_name.text = repo.name
-                cell.descriptionText.text = repo.description
+                cell.descriptionText.text = repo.descriptionString
                 cell.updated_at.text = repo.updated_at
                 cell.stargazers_count.text = String(repo.stargazers_count)
                 cell.avatar.imageFromServerURL(urlString: repo.avatar_url)
