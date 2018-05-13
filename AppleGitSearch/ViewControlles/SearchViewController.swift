@@ -10,15 +10,18 @@ import UIKit
 
 import RxSwift
 import RxCocoa
+import Reachability
 
 class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate {
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     
-    private let repos = Variable<[Repo]>([])
+    private let repos = Variable<[RepoSearch]>([])
     private let bag = DisposeBag()
     var urlToLoad = "http://apple.com"
+    
+    let reachability = Reachability()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +49,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
                 return URLSession.shared.rx.json(request: request)
                     .catchErrorJustReturn([])
             }
-            .map { json -> [Repo] in
+            .map { json -> [RepoSearch] in
                 guard let json = json as? [String: Any],
                     let items = json["items"] as? [[String: Any]]  else {
                         return []
                 }
-                return items.compactMap(Repo.init)
+                return items.compactMap(RepoSearch.init)
             }.bind(to: repos)
             .disposed(by: bag)
         
@@ -59,7 +62,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             .bind(to: tableView.rx.items) { tableView, row, repo in
                 let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
                 cell.full_name.text = repo.name
-                cell.descriptionText.text = repo.description
+                cell.descriptionText.text = repo.descriptionString
                 cell.updated_at.text = repo.updated_at
                 cell.stargazers_count.text = String(repo.stargazers_count)
                 cell.avatar.imageFromServerURL(urlString: repo.avatar_url)
@@ -83,9 +86,20 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        urlToLoad = self.repos.value[indexPath.row].html_url
-        performSegue(withIdentifier: "showWeb", sender: self)
-        tableView.deselectRow(at: indexPath, animated: false)
+        if reachability.connection == .none{
+            showAlertNoInternet()
+            tableView.deselectRow(at: indexPath, animated: false)
+        }else{
+            urlToLoad = self.repos.value[indexPath.row].html_url
+            performSegue(withIdentifier: "showWeb", sender: self)
+            tableView.deselectRow(at: indexPath, animated: false)
+        }
+    }
+    
+    func showAlertNoInternet(){
+        let alert = UIAlertController(title: "Oooops", message: "Looks like you are not connected to internet, please check your connection.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
