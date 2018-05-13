@@ -10,6 +10,7 @@ import UIKit
 
 import RxSwift
 import RxCocoa
+import Reachability
 
 class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate {
 
@@ -19,6 +20,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     private let repos = Variable<[RepoSearch]>([])
     private let bag = DisposeBag()
     var urlToLoad = "http://apple.com"
+    
+    let reachability = Reachability()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,9 +86,20 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        urlToLoad = self.repos.value[indexPath.row].html_url
-        performSegue(withIdentifier: "showWeb", sender: self)
-        tableView.deselectRow(at: indexPath, animated: false)
+        if reachability.connection == .none{
+            showAlertNoInternet()
+            tableView.deselectRow(at: indexPath, animated: false)
+        }else{
+            urlToLoad = self.repos.value[indexPath.row].html_url
+            performSegue(withIdentifier: "showWeb", sender: self)
+            tableView.deselectRow(at: indexPath, animated: false)
+        }
+    }
+    
+    func showAlertNoInternet(){
+        let alert = UIAlertController(title: "Oooops", message: "Looks like you are not connected to internet, please check your connection.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

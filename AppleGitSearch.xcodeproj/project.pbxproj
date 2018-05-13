@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37CAEF489874E22B086C1E3C /* Pods_AppleGitSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28925A4496655B07C8D93F93 /* Pods_AppleGitSearch.framework */; };
+		D013FDDA20A8B30F00DD6519 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D013FDD920A8B30F00DD6519 /* PersistenceService.swift */; };
 		D02B44F920A7738B008ABC41 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B44F820A7738B008ABC41 /* WebViewController.swift */; };
 		D02B44FB20A79ED0008ABC41 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B44FA20A79ED0008ABC41 /* Repo.swift */; };
 		D02B44FD20A7A126008ABC41 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B44FC20A7A126008ABC41 /* Extensions.swift */; };
@@ -21,12 +22,14 @@
 		D0A94B3220A63B3700AF09C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A94B3020A63B3700AF09C0 /* LaunchScreen.storyboard */; };
 		D0FB5B9C20A87C01002FAA26 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0FB5B9920A87C01002FAA26 /* Model.xcdatamodeld */; };
 		D0FB5B9E20A87D93002FAA26 /* RepoSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB5B9D20A87D93002FAA26 /* RepoSearch.swift */; };
+		D0FB5BA120A88070002FAA26 /* Repo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB5BA020A88070002FAA26 /* Repo+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		28925A4496655B07C8D93F93 /* Pods_AppleGitSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleGitSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3C633783B6101231CCBE76 /* Pods-AppleGitSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleGitSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppleGitSearch/Pods-AppleGitSearch.release.xcconfig"; sourceTree = "<group>"; };
 		C20593F07AF7F497BE0C6855 /* Pods-AppleGitSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleGitSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppleGitSearch/Pods-AppleGitSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		D013FDD920A8B30F00DD6519 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		D02B44F820A7738B008ABC41 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D02B44FA20A79ED0008ABC41 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		D02B44FC20A7A126008ABC41 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 		D0FB5B9A20A87C01002FAA26 /* Repo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Repo.xcdatamodel; sourceTree = "<group>"; };
 		D0FB5B9B20A87C01002FAA26 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D0FB5B9D20A87D93002FAA26 /* RepoSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearch.swift; sourceTree = "<group>"; };
+		D0FB5BA020A88070002FAA26 /* Repo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repo+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,14 +119,15 @@
 			isa = PBXGroup;
 			children = (
 				D0C0A88B20A7698300B50232 /* Models */,
+				D0FB5B9F20A88057002FAA26 /* Extensions */,
 				D02B450220A7C8B2008ABC41 /* ViewControlles */,
 				D02B450320A7C8DB008ABC41 /* CustomViews */,
 				D0A94B2520A63B3500AF09C0 /* AppDelegate.swift */,
+				D013FDD920A8B30F00DD6519 /* PersistenceService.swift */,
 				D0A94B2B20A63B3500AF09C0 /* Main.storyboard */,
-				D0A94B2E20A63B3700AF09C0 /* Assets.xcassets */,
 				D0A94B3020A63B3700AF09C0 /* LaunchScreen.storyboard */,
+				D0A94B2E20A63B3700AF09C0 /* Assets.xcassets */,
 				D0A94B3320A63B3700AF09C0 /* Info.plist */,
-				D02B44FC20A7A126008ABC41 /* Extensions.swift */,
 			);
 			path = AppleGitSearch;
 			sourceTree = "<group>";
@@ -135,6 +140,15 @@
 				D0FB5B9920A87C01002FAA26 /* Model.xcdatamodeld */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D0FB5B9F20A88057002FAA26 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D02B44FC20A7A126008ABC41 /* Extensions.swift */,
+				D0FB5BA020A88070002FAA26 /* Repo+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +230,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AppleGitSearch/Pods-AppleGitSearch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCoreData/RxCoreData.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -224,6 +239,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCoreData.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -277,10 +293,12 @@
 				D0FB5B9E20A87D93002FAA26 /* RepoSearch.swift in Sources */,
 				D02B44FB20A79ED0008ABC41 /* Repo.swift in Sources */,
 				D0A94B2A20A63B3500AF09C0 /* SearchViewController.swift in Sources */,
+				D013FDDA20A8B30F00DD6519 /* PersistenceService.swift in Sources */,
 				D0A94B2620A63B3500AF09C0 /* AppDelegate.swift in Sources */,
 				D0FB5B9C20A87C01002FAA26 /* Model.xcdatamodeld in Sources */,
 				D0A94B2820A63B3500AF09C0 /* AppleViewController.swift in Sources */,
 				D02B44F920A7738B008ABC41 /* WebViewController.swift in Sources */,
+				D0FB5BA120A88070002FAA26 /* Repo+Extensions.swift in Sources */,
 				D02B450120A7B0CF008ABC41 /* CustomCell.swift in Sources */,
 				D02B44FD20A7A126008ABC41 /* Extensions.swift in Sources */,
 			);

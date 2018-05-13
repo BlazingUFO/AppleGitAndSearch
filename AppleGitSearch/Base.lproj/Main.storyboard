@@ -30,7 +30,7 @@
         <!--Apple-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="AppleViewController" customModule="AppleGitSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppleViewController" id="9pv-A4-QxB" customClass="AppleViewController" customModule="AppleGitSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,6 +176,6 @@
         <image name="git" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Ip-A2-gmI"/>
+        <segue reference="iGO-31-zHb"/>
     </inferredMetricsTieBreakers>
 </document>
