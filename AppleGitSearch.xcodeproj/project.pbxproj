@@ -69,6 +69,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D02B450220A7C8B2008ABC41 /* ViewControlles */ = {
+			isa = PBXGroup;
+			children = (
+				D0A94B2720A63B3500AF09C0 /* AppleViewController.swift */,
+				D0A94B2920A63B3500AF09C0 /* SearchViewController.swift */,
+				D02B44F820A7738B008ABC41 /* WebViewController.swift */,
+			);
+			path = ViewControlles;
+			sourceTree = "<group>";
+		};
+		D02B450320A7C8DB008ABC41 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				D02B450020A7B0CF008ABC41 /* CustomCell.swift */,
+				D02B44FE20A7B0BE008ABC41 /* CustomCell.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		D0A94B1920A63B3500AF09C0 = {
 			isa = PBXGroup;
 			children = (
@@ -91,17 +110,14 @@
 			isa = PBXGroup;
 			children = (
 				D0C0A88B20A7698300B50232 /* Models */,
+				D02B450220A7C8B2008ABC41 /* ViewControlles */,
+				D02B450320A7C8DB008ABC41 /* CustomViews */,
 				D0A94B2520A63B3500AF09C0 /* AppDelegate.swift */,
-				D0A94B2720A63B3500AF09C0 /* AppleViewController.swift */,
-				D0A94B2920A63B3500AF09C0 /* SearchViewController.swift */,
 				D0A94B2B20A63B3500AF09C0 /* Main.storyboard */,
 				D0A94B2E20A63B3700AF09C0 /* Assets.xcassets */,
 				D0A94B3020A63B3700AF09C0 /* LaunchScreen.storyboard */,
 				D0A94B3320A63B3700AF09C0 /* Info.plist */,
-				D02B44F820A7738B008ABC41 /* WebViewController.swift */,
 				D02B44FC20A7A126008ABC41 /* Extensions.swift */,
-				D02B44FE20A7B0BE008ABC41 /* CustomCell.xib */,
-				D02B450020A7B0CF008ABC41 /* CustomCell.swift */,
 			);
 			path = AppleGitSearch;
 			sourceTree = "<group>";

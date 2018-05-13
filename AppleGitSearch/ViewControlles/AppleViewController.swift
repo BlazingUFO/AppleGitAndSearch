@@ -24,6 +24,7 @@ class AppleViewController: UIViewController, UITableViewDelegate {
         self.tableView.delegate = self
         self.tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         getRequest()
+        saveToCoreData()
     }
     
     func getRequest(){
@@ -44,6 +45,9 @@ class AppleViewController: UIViewController, UITableViewDelegate {
     }
     
     func bindUI(){
+  
+        
+        
             repos.asObservable()
             .bind(to: tableView.rx.items) { tableView, row, repo in
                 let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
@@ -55,6 +59,11 @@ class AppleViewController: UIViewController, UITableViewDelegate {
                 return cell
             }
             .disposed(by: bag)
+        
+    }
+    
+    func saveToCoreData(){
+        print(repos.value.count)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -73,7 +82,6 @@ class AppleViewController: UIViewController, UITableViewDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }

@@ -19,8 +19,6 @@ class CustomCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        // Initialization code
     }
 
     override func layoutSubviews() {

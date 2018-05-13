@@ -29,14 +29,22 @@ struct Repo {
             else {
                 return nil
         }
+        let dateFormatter = DateFormatter()
+        let tempLocale = dateFormatter.locale
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let dateToReturn = dateFormatter.date(from: updated_at)!
+        dateFormatter.dateFormat = "HH:mm dd.MM.yyyy"
+        dateFormatter.locale = tempLocale
+        self.updated_at = dateFormatter.string(from: dateToReturn)
         self.id = id
         self.name = name
         self.description = description
         self.html_url = html_url
         self.avatar_url = avatar_url
-        self.updated_at = updated_at
         self.stargazers_count = stargazers_count
     }
+    
     
     init(_ id: Int, _ name: String, _ description: String, _ html_url: String, _ avatar_url: String, _ updated_at: String, _ stargazers_count: Int) {
         self.id = id
